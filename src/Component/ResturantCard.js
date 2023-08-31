@@ -1,12 +1,13 @@
-const RestaurantCard = () =>{
+const RestaurantCard = (props) =>{
+    const {resdata} = props
     return(
         <>
             <div className="resturant_card">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7"></img>
-                <p>Burger King</p>
-                <p>Ratings: 4.1</p>
-                <p>Fast Food, Pizaas</p>
-                <p>Netaji Nagar</p>
+                <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resdata.info.cloudinaryImageId}/>
+                <p>{resdata.info.name}</p>
+                <p>Rating: {resdata.info.avgRating}</p>
+                <p>{resdata.info.cuisines.join(", ")}</p>
+                <p>{resdata.info.areaName}</p>
             </div>
         </>
     )

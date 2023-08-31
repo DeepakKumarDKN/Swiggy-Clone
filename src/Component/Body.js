@@ -1,4 +1,5 @@
 import RestaurantCard from "./ResturantCard";
+import AllResturants from '../utils/Resturants'
 
 
 const BodyComponent = () =>{
@@ -10,10 +11,11 @@ const BodyComponent = () =>{
         </div>
 
         <div className="resturants_list maxWidth">
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
+            {
+                AllResturants.map((resturant)=>(
+                    <RestaurantCard resdata = {resturant}/>
+                ))
+            }
         </div>
         </>
     )
