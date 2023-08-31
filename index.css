@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.logo_section p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.header_part{
+    display:flex;
+    justify-content: space-between;
+    margin: 1rem 5rem;  
+    align-items: center;
+}
+
+.logo_section{
+    display:flex;
+    align-items: center;
+}
+
+.header_part .logo{
+    width: 100px;
+    height: auto;
+}
+
+.list-items{
+    display:flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+.header-right-part .list-items li{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    
+}
+
+.maxWidth{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search_bar input[type="text"]{
+    width: 50%;
+    padding: 5px;
+}
+
+.search_bar{
+    display:flex;
+    gap: 1rem;
+}
+.search_bar button{
+   font-family: "Poppins";
+   padding: 10px 20px;
+   border:none;
+}
+
+.resturants_list{
+    margin-top: 1rem;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resturant_card{
+    width: 270px;
+}
+.resturant_card > p{
+    font-family: "Poppins";
+    font-size: 14px;
+    
+}
+.resturant_card >:nth-child(2){
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.resturant_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 20px;
+}
