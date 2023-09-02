@@ -64,7 +64,7 @@
 .resturants_list{
     margin-top: 1rem;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -116,4 +116,17 @@
 .resturant_card .cuisine_name{
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.top-res{
+    background-color: black;
+    color:white;
+}
+
+.filter_btn{
+    padding: 10px 20px;
+    background-color: rgb(237, 98, 6);
+    color:white;
+    border:none;
+    font-family: "Poppins";
 }

@@ -1,4 +1,9 @@
+import AllResturants from "../utils/Resturants";
+import RestaurantCard from "./ResturantCard";
+
+
 const HeaderComponent = () =>{
+  
     return(
         <>
         <div className="header_part">
@@ -13,6 +18,8 @@ const HeaderComponent = () =>{
                     <li>Cart</li>
                 </ul>
             </div>
+            <button className="filter_btn" onClick= {() => (console.log('hello'))}
+            >Filter</button>
         </div>
         </>
     )
