@@ -1,10 +1,9 @@
+import { useState } from "react";
 import AllResturants from "../utils/Resturants";
-import RestaurantCard from "./ResturantCard";
-
 
 const HeaderComponent = () =>{
-  
-    return(
+
+     return(
         <>
         <div className="header_part">
             <div className="logo_section">
@@ -18,8 +17,6 @@ const HeaderComponent = () =>{
                     <li>Cart</li>
                 </ul>
             </div>
-            <button className="filter_btn" onClick= {() => (console.log('hello'))}
-            >Filter</button>
         </div>
         </>
     )
