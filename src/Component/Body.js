@@ -1,5 +1,5 @@
+import AllResturants from "../utils/Resturants";
 import RestaurantCard from "./ResturantCard";
-import AllResturants from '../utils/Resturants'
 import { useEffect, useState } from "react";
 
 
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const BodyComponent = () =>{
 
-    let [listofResturants, setResturants] = useState(AllResturants)
+    let [listofResturants, setResturants] = useState([])
     let [searchText, setsearchText] = useState()
 
     useEffect(
@@ -19,9 +19,16 @@ const BodyComponent = () =>{
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.4717414&lng=88.3454871&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
             );
         
-        const json = await data.json
+        const json = await data.json()
         console.log(json)
+
+        // setResturants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+        // not a good way to fetch data like this thats why we will go for opional chaining.
+
+        setResturants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
+
+
 
     return(
         <>
@@ -32,15 +39,10 @@ const BodyComponent = () =>{
             onChange={(e) => setsearchText(e.target.value)}
             />
             
-
             <button  type="submit" className="submit_button">Submit</button>
-
-
             <button  className="top-res" onClick={() => {
                     const filteredList = listofResturants.filter((res) => res.info.avgRating >= 4.6)
-                    setResturants(filteredList)
-
-                }}>
+                    setResturants(filteredList)}}> 
             Top Resturants</button>
         </div>
 

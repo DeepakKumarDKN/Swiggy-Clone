@@ -130,3 +130,8 @@
     border:none;
     font-family: "Poppins";
 }
+
+.loading_image{
+    display:block;
+    margin: 0 auto;
+}
