@@ -3,7 +3,7 @@ import AllResturants from "../utils/Resturants";
 import logoImage from '../Image/logoImage.avif'
 
 const HeaderComponent = () =>{
-
+    const [btnName, setbtnName] = useState('Login')
      return(
         <>
         <div className="header_part">
@@ -17,6 +17,9 @@ const HeaderComponent = () =>{
                     <li>About Us</li>
                     <li>Contact Us</li>
                     <li>Cart</li>
+                    <button className="login_logout" onClick = {() => {
+                        btnName === "Login" ? setbtnName('Logout') : setbtnName('Login') 
+                    }}>{btnName}</button>
                 </ul>
             </div>
         </div>
