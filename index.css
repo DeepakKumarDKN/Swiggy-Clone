@@ -48,9 +48,6 @@
 }
 
 
-.Body .search_bar{
-    margin-bottom: 1rem;
-}
 
 .resturant_container{
     display: flex;
@@ -101,3 +98,41 @@
     gap: 5px;
     font-family: "Poppins";
  }
+
+.login_logout{
+    padding: 10px 30px;
+    border:none;
+    background-color: orange;
+    color:white;
+    font-weight: 600;
+}
+
+.buttons_section{
+    display:flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.buttons_section .search_bar input[type="text"]{
+    padding: 10px;
+}
+
+.submit_btn, 
+.top_res{
+   padding: 10px; 
+   border: none;
+   font-family: "Poppins";
+   font-weight: 500;
+   cursor: pointer;
+}
+.top_res{
+    background-color: orange;
+    color:white;
+    
+}
+
+.submit_btn:hover{
+    background-color: black;
+    color:white;
+}
